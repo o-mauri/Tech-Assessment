@@ -19,7 +19,7 @@ The following is a step by step guide of how to set up the project to view
 (The commands below are for linux/unix based systems - please convert as appropriate for windows)
 ### Launching backend
  1. Open a new terminal
- 2. Navigate to backend folder: ``cd /backend``
+ 2. Navigate to backend folder: ``cd backend``
  3. Create a new virtual env running python 3.7>
  3. Install requirements: ``pip install -r requirements.txt``
  4. Run ``flask run``
@@ -28,7 +28,7 @@ The following is a step by step guide of how to set up the project to view
 
 ### Launching frontend
 1. Open another new terminal
-2. Navigate to frontend project folder: ``cd /frontend/aiimi-techtrial``
+2. Navigate to frontend project folder: ``cd frontend/aiimi-techtrial``
 3. Install dependencies: ``npm install``
 4. Run ``npm start``
 5. You can now visit the web application from a browser by visiting - 127.0.0.1:4200
