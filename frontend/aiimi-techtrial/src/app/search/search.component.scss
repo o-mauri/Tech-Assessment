@@ -1,0 +1,85 @@
+@use '../../variables' as v;
+$searchHeight: 50px;
+
+.search-comp{
+    justify-content: center;
+    position: relative;
+    display: flex;
+}
+
+.search-area-open{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    height: 45vh;
+    order: 1;
+}
+
+.search-area-closed{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    height: 25vh;
+    order: 1;
+}
+
+.search-bar{
+    position: absolute;
+    bottom: 15px;
+    height: $searchHeight;
+    width: 60%;
+    min-width: 600px;
+    justify-content: center;
+    display: flex;
+
+    input{
+        width: 80%;
+        border-radius: 25px 0px 0px 25px;
+        padding-left: 25px;
+        border-color: v.$aiimiPink;
+        border-width: 1px;
+        border-style: solid;
+        font-size: 18px;
+        &:active{
+            border-width: 2px;
+            border-color: v.$accentPink;
+        }
+    }
+    button{
+        width: 80px;
+        border-radius: 0px 25px 25px 0px;
+        background-color: v.$aiimiPink;
+        color: white;
+        border-color: v.$aiimiPink;
+        border-width: 1px;
+        border-style: solid;
+        font-size: 18px;
+        &:hover{
+            background-color: v.$accentPink;
+        }
+        &:active{
+            border-color: black;
+        }
+    }
+}
+
+.suggestions-bar{
+    position: absolute;
+    background-color: white;
+    width: calc(48% + 80px);
+    border-radius: 20px;
+    border-color: v.$aiimiPink;
+    border-width: 1px;
+    border-style: solid;
+    order: 2;
+    color: black;
+    padding-left: 25px;
+    p {
+        cursor: pointer;
+        &:hover{
+            font-weight: bold;
+        }
+    }
+}

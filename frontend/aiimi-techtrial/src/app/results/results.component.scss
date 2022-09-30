@@ -1,0 +1,32 @@
+.results-container{
+    width: 55vw;
+    min-width: 600px;
+    height: 50vh;
+    min-height: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: auto;
+    justify-content: flex-start;
+    align-content: flex-start;
+    column-gap: 40px;
+}
+
+.result-box{
+    border: 2px solid white;
+    border-radius: 15px;
+    width: 250px;
+    margin-bottom: 25px;
+    color: white;
+    h2{
+        margin-top: 10px;
+        margin-left: 20px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        font-size: 17px;
+    }
+    p{
+        margin-left: 35px;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,7 @@
+@use 'variables' as v;
+
+body{
+    background-color: black;
+    color: v.$aiimiPink;
+    font-family: 'Trebuchet MS', 'sans-serif';
+}

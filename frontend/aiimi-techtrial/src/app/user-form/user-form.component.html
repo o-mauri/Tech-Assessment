@@ -1,0 +1,17 @@
+<form class="form-box" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+    <div><input class="name-fields" placeholder="First name" name="FirstName" [(ngModel)]="formInputs.FirstName" required #FirstNameField="ngModel">
+        <div [hidden]="FirstNameField.valid || (FirstNameField.untouched && !userForm.submitted)" class="validation-text"><fa-icon [icon]="faTriangleExclamation"></fa-icon> Please Enter A Valid First Name</div></div>
+    <div><input class="name-fields" placeholder="Last name" name="LastName" [(ngModel)]="formInputs.LastName" required #LastNameField="ngModel">
+        <div [hidden]="LastNameField.valid || (LastNameField.untouched && !userForm.submitted)" class="validation-text"><fa-icon [icon]="faTriangleExclamation"></fa-icon> Please Enter A Valid Last Name</div></div>
+    <div><input class="data-field" placeholder="Job title" name="JobTitle" [(ngModel)]="formInputs.JobTitle" required #JobField="ngModel">
+        <div [hidden]="JobField.valid || (JobField.untouched && !userForm.submitted)" class="validation-text"><fa-icon [icon]="faTriangleExclamation"></fa-icon> Please Enter A Valid Job Title</div></div>
+    <div><input class="data-field" placeholder="Phone" name="Phone" [(ngModel)]="formInputs.Phone" required minlength="11" maxlength="11" pattern="0.*" #PhoneField="ngModel">
+        <div [hidden]="PhoneField.valid || (PhoneField.untouched && !userForm.submitted)" class="validation-text"><fa-icon [icon]="faTriangleExclamation"></fa-icon> Please Enter A Valid Phone Number</div>
+    </div>
+    <div> <input class="data-field" placeholder="Email" name="Email" [(ngModel)]="formInputs.Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" #EmailField="ngModel">
+        <div [hidden]="EmailField.valid || (EmailField.untouched && !userForm.submitted)" class="validation-text"><fa-icon [icon]="faTriangleExclamation"></fa-icon> Please Enter A Valid Email Address</div>
+    </div>
+    <div class="button-container">
+        <button>Create</button>
+    </div>
+</form>

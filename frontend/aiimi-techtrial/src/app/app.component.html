@@ -1,0 +1,15 @@
+<div class="page-title">
+    <h2>{{pageTitle}}</h2>
+</div>
+
+<att-search [searchAreaStatus]="searchAreaStatus" [justNames]="namesArray" (notifyStatus)="onStatusChange($event)"
+    (notifyQuery)="onNewQuery($event)"></att-search>
+<div class="results-box">
+    <att-results *ngIf="!searchAreaStatus" [peopleData]="peopleData" [searchQuery]="searchQuery"></att-results>
+</div>
+<div class="form-container">
+    <att-user-form  [backendURL]='backendURL' *ngIf="showForm && searchAreaStatus" (notifyUserAdded)="onUserAdded()"></att-user-form>
+</div>
+<div class="bottom-bar"><button class="new-user-btn" (click)="onNewUserClick()">New User <fa-icon [icon]="faUserPlus"></fa-icon></button></div>
+
+<div *ngIf="userAdded" class="user-added-icon">New user added!<button (click)="userAdded=false"><fa-icon [icon]="faCircleXmark"></fa-icon></button></div>

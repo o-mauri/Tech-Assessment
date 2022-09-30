@@ -1,0 +1,66 @@
+@use '../variables' as v;
+
+div{
+    display: flex;
+}
+
+.page-title{
+    margin-left: 30px;
+}
+
+.bottom-bar{
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    justify-content: center;
+}
+
+.new-user-btn{
+    background-color: v.$aiimiPink;
+    color: white;
+    border: 0px;
+    border-radius: 20px;
+    padding: 15px;
+
+    &:hover{
+        background-color: v.$accentPink;
+    }
+    &:active{
+        border-style: inset;
+        border-width: 1px;
+    }
+}
+
+.results-box{
+    justify-content: center;
+    width: 100vw;
+}
+
+.form-container{
+    justify-content: center;
+    position: absolute;
+    bottom: 110px;
+    width: 100vw;
+}
+
+.user-added-icon{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background-color: v.$aiimiPink;
+    color: white;
+    padding: 13px;
+    border-radius: 24px;
+    button{
+        background: transparent;
+        border-width: 0px;
+        margin-left: 10px;
+        transform: scale(2);
+        cursor: pointer;
+        color: white;
+        transition: 0.5s;
+        &:hover{
+            transform: scale(2.3);
+        }
+    }
+}

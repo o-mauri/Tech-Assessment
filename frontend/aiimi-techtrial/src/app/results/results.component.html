@@ -1,0 +1,9 @@
+<div class="results-container">
+    <div *ngFor="let person of filteredEmployees" class="result-box">
+        <h2>{{person.FirstName}} {{person.LastName}}</h2>
+        <p>{{person.JobTitle}}</p>
+        <p>{{person.Phone}}</p>
+        <p>{{person.Email}}</p>
+    </div>
+    <h1 *ngIf="!filteredEmployees.length">No Users Found Matching that Name</h1>
+</div>

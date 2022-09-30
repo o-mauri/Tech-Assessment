@@ -1,0 +1,66 @@
+@use '../../variables' as v;
+
+.form-box{
+    background-color: rgb(225, 225, 225);
+    height: 190px;
+    width: 620px;
+    border: 2px solid v.$aiimiPink;
+    border-radius: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: space-around;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    input{
+        font-size: 14px;
+        height: 30px;
+        border-radius: 15px;
+        border:1px solid rgb(112, 112, 112);
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.name-fields{
+    width: 266px;
+}
+.data-field{
+    width: 160px;
+}
+
+.button-container{
+    display: flex;
+    width: 620px;
+    height: 35px;
+    justify-content: center;
+    button{
+        height: 100%;
+        background-color: v.$aiimiPink;
+        border: 0px solid black;
+        width: 80px;
+        border-radius: 17.5px;
+        color: white;
+        &:hover{
+            background-color: v.$accentPink;
+        }
+        &:active{
+            border-width: 1px;
+        }
+    }
+}
+
+.validation-text{
+    color: red;
+    font-size: 11px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.ng-invalid:not(form).ng-touched{
+    border-color: red;
+}

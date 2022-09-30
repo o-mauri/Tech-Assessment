@@ -1,0 +1,8 @@
+ <div class="{{ searchAreaStatus ? 'search-area-open' : 'search-area-closed'}}">
+    <div class="search-bar"><input type="text" [(ngModel)]="searchQuery" (ngModelChange)="updateSearchQuery()" placeholder="Search for a user..."><button (click)="handleSearchClick()">Go!</button></div>
+</div>
+<div *ngIf="suggestedNames.length" class="search-comp">
+<div class="suggestions-bar">
+    <a *ngFor="let suggestion of suggestedNames" (click)="clickSuggestion(suggestion)"><p><mark>{{suggestion[0]}}</mark>{{suggestion[1]}} <mark>{{suggestion[2]}}</mark>{{suggestion[3]}}</p></a>
+</div>
+</div>
